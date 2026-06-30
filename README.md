@@ -1,73 +1,67 @@
-# React + TypeScript + Vite
+# Campus Service Request and Maintenance System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Deskripsi
 
-Currently, two official plugins are available:
+Campus Service Request and Maintenance System adalah aplikasi berbasis web yang digunakan untuk membantu mahasiswa dan dosen melaporkan kerusakan fasilitas kampus.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Administrator akan memeriksa laporan, menentukan prioritas, dan menugaskan teknisi. Teknisi akan memperbarui progres pekerjaan hingga selesai. Pelapor dapat melihat perkembangan laporan secara real-time.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tujuan
 
-## Expanding the ESLint configuration
+- Mempermudah pelaporan kerusakan fasilitas kampus.
+- Mempercepat proses penanganan.
+- Memudahkan monitoring pekerjaan teknisi.
+- Menyediakan dashboard bagi manajemen fasilitas.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Teknologi
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Frontend
+- React
+- TypeScript
+- Tailwind CSS
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Backend
+- Cloudflare Workers
+
+Database
+- Cloudflare D1 (SQLite)
+
+Testing
+- Vitest
+
+Deployment
+- Cloudflare
+
+---
+
+## Cara Menjalankan
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Struktur Project
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+docs/
+skills/
+src/
+worker/
+database/
+tests/
+```
+
+---
+
+## Author
+
+Nama :
+NIM :
+Mata Kuliah : Software Engineering
